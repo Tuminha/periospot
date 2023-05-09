@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #045dd5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header img {
+    width: 200px;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffc430;
+    color: #045dd5;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  
