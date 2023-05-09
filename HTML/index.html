@@ -1,22 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Periospot 3.0</title>
-    <!-- We'll add CSS and JavaScript links here later -->
-</head>
-<body>
-    <header>
-        <h1>Welcome to Periospot 3.0</h1>
-        <p>Where dentistry meets Web 3.0, blockchain and AI</p>
-        <button>Connect Your Wallet</button>
-    </header>
-    
-    <main>
-        <!-- We'll fill this in with our main content later -->
-    </main>
+  <head>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.5.2/dist/web3.min.js"></script>
 
+    <title>Periospot 3.0</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+  </head>
+  <body>
+    <button id="connect-wallet" onclick="connectWallet()">Connect Your Wallet</button>
+
+
+    <header>
+        <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#exclusive-content">Exclusive Content</a></li>
+              <ul>
+                <li><a href="periodontics.html">Periodontics</a></li>
+                <li><a href="implant-dentistry.html">Implant Dentistry</a></li>
+              </ul>
+              <li><a href="#mint-nft">Mint NFT</a></li>
+              <li><a href="#benefits">Benefits of Periospot 3.0</a></li>
+            </ul>
+          </nav>
+          
+      <img src="icons/Logo_negro-01.png" alt="Periospot Logo" />
+      <h1>Welcome to Periospot 3.0</h1>
+      <p>Where dentistry meets Web 3.0, Blockchain and AI</p>
+      <button class="cta-button">Connect your Wallet</button>
+    </header>
+    <main>
+        <main>
+            <section class="info-section">
+              <div class="info-item">
+                <img src="icons/why_icon.png" alt="why icon" />
+                <h2>Why</h2>
+                <p>Description about why Periospot 3.0</p>
+              </div>
+              <div class="info-item">
+                <img src="icons/how_icon.png" alt="how icon" />
+                <h2>How</h2>
+                <p>Description about how Periospot 3.0 works</p>
+              </div>
+              <div class="info-item">
+                <img src="icons/what_icon.png" alt="what icon" />
+                <h2>What</h2>
+                <p>Description about what Periospot 3.0 is</p>
+              </div>
+            </section>
+          </main>
+    </main>
     <footer>
-        <!-- We'll add footer details here later -->
+      <!-- We can add a footer here if needed -->
     </footer>
-</body>
+
+
+    <script>
+        window.addEventListener('load', async () => {
+          // Modern dapp browsers...
+          if (window.ethereum) {
+            window.web3 = new Web3(ethereum);
+            try {
+              // Request account access if needed
+              await ethereum.enable();
+              // Acccounts now exposed
+              web3.eth.sendTransaction({/* ... */});
+            } catch (error) {
+              // User denied account access...
+            }
+          }
+          // Legacy dapp browsers...
+          else if (window.web3) {
+            window.web3 = new Web3(web3.currentProvider);
+            // Acccounts always exposed
+            web3.eth.sendTransaction({/* ... */});
+          }
+          // Non-dapp browsers...
+          else {
+            console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+          }
+        });
+        </script>
+        
+
+
+        <script src="../JavaScript/connect.js"></script>
+
+
+  </body>
 </html>
